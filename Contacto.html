@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="utf-8">
+    <title> Contacto </title>
+    <link rel="stylesheet" href="lab3.css">
+</head>
+<body>
+    <!--Enlace para volver a la pagina principal-->
+        <h1> Contacto </h1>
+        <a href="index.html"> Volver a la pagina principal</a><br><br>
+    <!-- Campo para el nombre-->
+    <form id="Formulario">
+
+        <label for="nombre"> Nombre (requerido)</label>
+        <input type="text" id="nombre" name="nombre" maxlength="20" required><br> <br>
+        <!--Campo para el apellido-->
+        <label for="apellido"> Apellido</label>
+        <input type="text" id="apellido" name="apellido" maxlength="20" required><br><br>
+        <!--Campo para email-->
+        <label for="email"> Email (requerido)</label>
+        <input type="email" id="email" name="email" required><br><br>
+        <!--Campo para telefono-->
+        <label for="telefono"> Telefono </label>
+        <input type="tel" id="telefono" name="telefono"
+        placeholder="Ingrese su telefono"
+        onfocus="this.placeholder=''" 
+        onblur="this.placeholder='Ingrese su telefono'"><br><br>  <!--onfocus y onblur hacen que la ayuda del telefono desaparezca al hacer clic-->
+        <!--Campo para la edad-->
+        <label for="edad">Edad</label>
+        <input type="number" id="edad" name="edad" min="16" max="120" required><br><br>
+        <!--Campo para la Direccion-->
+        <label for="direccion"> Direccion </label>
+        <textarea id="direccion" name="direccion"></textarea><br><br>
+        <!--Provincia con listas-->
+        <label for="provincia"> Provincia </label>
+        <input list="Provincias" name="provincia" id="provincia" required>
+            <datalist id="Provincias">
+                <option value="Buenos Aires">
+                <option value="Catamarca">
+                <option value="Chaco">
+                <option value="Chubut">
+                <option value="Córdoba">
+                <option value="Corrientes">
+                <option value="Entre Ríos">
+                <option value="Formosa">
+                <option value="Jujuy">
+                <option value="La Pampa">
+                <option value="La Rioja">
+                <option value="Mendoza">
+                <option value="Misiones">
+                <option value="Neuquén">
+            </datalist>
+        <!--Codigo Postal-->
+        <label for="codigoPostal"> Codigo Postal </label>
+        <input type="text" id="codigoPostal" name="codigoPostal"
+        pattern="[A-Z][0-9]{4}[A-Z]{3}"
+        placeholder="Ej:A1234ABC"><br><br>
+        
+        <fieldset> <!--Metodo de contacto-->
+            <!--Por email-->
+            <legend> Metodo de Contacto: </legend>
+            <input type="radio" id="metodo_email" name="metodo"
+            value="email" checked>
+            <label for="metodo_email"> Email </label><br>
+            <!--Por telefono-->
+            <input type="radio" id="metodo_telefono" name="metodo"
+            value="telefono">
+            <label for="metodo_telefono"> Telefono </label><br>
+            <!--Por codigo postal-->
+            <input type="radio" id="metodo_codigoPostal" name="metodo"
+            value="codigoPostal">
+            <label for="metodo_codigoPostal"> Codigo Postal </label><br>
+
+        </fieldset>
+        <fieldset>
+            <!--Tipo de suscripcion-->
+            <legend> Tipo de suscripción: </legend>
+            <input type="checkbox" id="Noticias" name="suscripcion"
+            value="Noticias" checked>
+            <label for="Noticias"> Noticias </label><br>
+
+            <input type="checkbox" id="Promociones" name="suscripcion"
+            value="Promociones">
+            <label for="Promociones"> Promociones </label><br>
+
+            <input type="checkbox" id="Alertas" name="suscripcion"
+            value="Alertas">
+            <label for="Alertas"> Alertas </label><br>
+
+            <input type="checkbox" id="Eventos" name="suscripcion" value="Eventos">
+            <label for="Eventos"> Eventos</label>
+        </fieldset> <br>
+        <!--Boton de carga-->
+        <button type="button" id="btnCargar"> Cargar</button>
+    </form>
+    <br>
+
+<table>
+    <thead>
+    <tr>
+        <th>Campo</th>
+        <th>Valor</th>
+    </tr>
+    </thead>
+    <tbody>
+    <tr><td>Nombre</td><td id="tdNombre"></td></tr>
+    <tr><td>Apellido</td><td id="tdApellido"></td></tr>
+    <tr><td>Email</td><td id="tdEmail"></td></tr>
+    <tr><td>Teléfono</td><td id="tdTelefono"></td></tr>
+    <tr><td>Edad</td><td id="tdEdad"></td></tr>
+    <tr><td>Dirección</td><td id="tdDireccion"></td></tr>
+    <tr><td>Provincia</td><td id="tdProvincia"></td></tr>
+    <tr><td>Código Postal</td><td id="tdCodigoPostal"></td></tr>
+    <tr><td>Método de contacto</td><td id="tdMetodo"></td></tr>
+    <tr><td>Suscripción</td><td id="tdSuscripcion"></td></tr>
+    </tbody>
+</table>
+
+
+<!-- Enlace al archivo JavaScript -->
+<script src="lab3.js" defer ></script>
+</body>
+</html>
