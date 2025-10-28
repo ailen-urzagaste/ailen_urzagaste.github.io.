@@ -9,6 +9,42 @@ font-family:Georgia, 'Times New Roman', Times, serif, front;
 }
 h2 {color:rgb(255, 0, 80);
 font-family: 'Times New Roman', Times, serif;}
-p { font-family: Georgia, 'Times New Roman', Times, serif, front;}
+p{
+    font-family: "EB Garamond", serif;
+    font-optical-sizing: auto;
+    font-weight: weight;
+    font-style: normal;
+}
 
+.titulo{
+    opacity:0;
+    animation: aparecer 2.5s ease forwards;
+}
+@keyframes aparecer{
+    to{
+        opacity:3;
+    }
+}
+.header-titulo{
+    display:flex;
+    align-items:center;
+    gap: 15px;
+}
+.header-titulo img{
+    width: 130px;
+    height:auto;
+}
+.header-titulo img:hover{
+    transform: rotateY(400deg);
+    transform-style: preserve-3d;
+    transition: transform .6s ease;
+}
+    
 
+.titulo{margin: 0};
+
+.titulo-con-logo{
+    width: 1200px;
+    height: auto;
+    perspective: 800px;
+}
