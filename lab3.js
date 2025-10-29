@@ -27,3 +27,34 @@ if (btn) {
     console.warn('Botón btnCargar no encontrado en la página.');
 }
 });
+
+// lab4
+
+const p = document.getElementById('parrafo');
+
+const range = document.createRange();
+range.setStart(p.firstChild, 0);
+range.setEnd(p.firstChild, 1); 
+
+let clientRects = range.getClientRects();
+if (clientRects.length === 0) return;
+
+let firstLineTop = clientRects[0].top;
+
+let i = 1;
+while (true) {
+    range.setEnd(p.firstChild, i);
+    const rects = range.getClientRects();
+    if (rects[rects.length-1].top !== firstLineTop) break;
+    i++;
+}
+
+const firstLineText = p.textContent.slice(0, i-1);
+
+//sticky arriba
+const sticky = document.createElement("div");
+sticky.id = "sticky-line";
+sticky.textContent = firstLineText;
+p.parentNode.insertBefore(sticky, p);
+
+p.textContent = p.textContent.slice(i-1);
