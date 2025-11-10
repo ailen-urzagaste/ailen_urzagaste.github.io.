@@ -24,18 +24,39 @@
                 </ul>
             </nav>
             </header>
-        <main> 
-            <section id="acercade"> 
-                <article class="texto-acercade">
-                    <p class="linea-fija"> Tengo 19 años, actualmente soy estudiante de la carrera de Desarollo Web en la Universidad Nacional del Comahue.</p> 
-                    <p>Soy de la Localidad de Pedro Luro, nací el 11 de Abril en Mendoza.<br>Finalice mi secundario en la Escuela de Educación Media N°1 con orientacion en Economía y Administración (2018-2023). Además realice una Formación en Registrador Contable (2020-2023).</p>
-                </article>
+        <main>
+            <section id="acercade">
+            <article class="texto-acercade">
+                <p class="linea-fija">Tengo 19 años, actualmente soy estudiante de la carrera de Desarrollo Web en la Universidad Nacional del Comahue.
+                </p>
+
+                <p>Soy de la localidad de Pedro Luro, nací el 11 de Abril en Mendoza. Finalicé mi secundario en la Escuela de Educación Media N°1 con orientación en Economía y Administración (2018-2023). Además, realicé una Formación en Registrador Contable (2020-2023).
+                </p>
+
+    <!-- Botón de lectura -->
+            <button id="btnLeerMas">Leer más</button>
+            </article>
             </section>
-            <figure> 
-                <img src="Imagen-ailen.jpg" alt=" Imagen de Ailén Urzagaste">
-                <figcaption>Ailén Urzagaste</figcaption>
+
+            <figure>
+            <img src="Imagen-ailen.jpg" alt="Imagen de Ailén Urzagaste">
+            <figcaption>Ailén Urzagaste</figcaption>
             </figure>
         </main>
+
+<script>
+document.addEventListener("DOMContentLoaded", () => {
+    const btn = document.getElementById("btnLeerMas");
+    const extra = document.getElementById("masInfo");
+
+    btn.addEventListener("click", () => {
+    const visible = extra.style.display === "block";
+    extra.style.display = visible ? "none" : "block";
+    btn.textContent = visible ? "Leer más" : "Leer menos";
+    });
+});
+</script>
+
         <footer> 
             <p> © 2025 Ailén Urzagaste Aguirre</p>
             <p> Univesidad COMAHUE-Viedma, Rio Negro</p> 
