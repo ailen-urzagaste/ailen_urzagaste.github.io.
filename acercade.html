@@ -1,67 +1,83 @@
 <!DOCTYPE html>
 <html lang="es">
-        <head> 
-            <meta charset="utf-8">
-            <meta name="viewport" content="width=device-width, initial-scale=1.0">
-            <title> Ailen Urzagaste</title>
-            <link rel="stylesheet" href="styles.css">
-            <link rel="preconnect" href="https://fonts.googleapis.com">   <!--fuente web-->
-            <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-            <link href="https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@0,400..800;1,400..800&display=swap" rel="stylesheet">
-        </head> 
-        <body>
-            <header class="topbarra"> 
-                <div class="header-titulo">
-                <h1>Ailén Urzagaste</h1>
-                <img src="logouni.jpeg" alt="logo">
-                </div>
-            
-            <nav class="navbar">
-                <ul> 
-                    <li><a href="index.html"> Inicio </a> </li>
-                    <li><a href= "acercade.html"> Acerca de mi </a> </li>
-                    <li><a href= "Contacto.html"> Contacto </a> </li>
-                </ul>
-            </nav>
-            </header>
-        <main>
-            <section id="acercade">
-            <article class="texto-acercade">
-                <p class="linea-fija">Tengo 19 años, actualmente soy estudiante de la carrera de Desarrollo Web en la Universidad Nacional del Comahue.
+<head> 
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ailén Urzagaste</title>
+    <link rel="stylesheet" href="styles.css">
+
+    <!-- Fuente web -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=EB+Garamond:wght@400;500;600;700&display=swap" rel="stylesheet">
+</head> 
+
+<body>
+    <header class="topbarra"> 
+        <div class="header-titulo">
+            <h1>Ailén Urzagaste</h1>
+            <img src="logouni.jpeg" alt="logo">
+        </div>
+
+        <nav class="navbar">
+            <ul> 
+                <li><a href="index.html">Inicio</a></li>
+                <li><a href="acercade.html">Acerca de mí</a></li>
+                <li><a href="contacto.html">Contacto</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section id="acercade">
+    <article class="texto-acercade">
+
+        <!-- Texto visible -->
+        <p class="resumen">
+            Tengo 19 años y actualmente soy estudiante de la Tecnicatura en Desarrollo Web 
+            en la Universidad Nacional del Comahue. 
+        </p>
+        <p>
+            Realicé mis estudios secundarios en la 
+            Escuela de Educación Media N°1 con orientación en Economía y Administración...
+        </p>
+
+
+        <!-- Texto oculto (CV completo) -->
+        <div id="cvCompleto" class="oculto">
+            <p>
+                Además, realicé la Formación en Registrador Contable (2020-2023), donde adquirí conocimientos sobre el registro y control de operaciones, así como en la elaboración de balances.
                 </p>
 
-                <p>Soy de la localidad de Pedro Luro, nací el 11 de Abril en Mendoza. Finalicé mi secundario en la Escuela de Educación Media N°1 con orientación en Economía y Administración (2018-2023). Además, realicé una Formación en Registrador Contable (2020-2023).
+                <p>
+                    Actualmente (2025) me encuentro cursando la Tecnicatura en Desarrollo Web, donde he adquirido conocimientos en distintos lenguajes de programación, tales como:<br>
+                    • Python <br>
+                    • HTML <br>
+                    • CSS <br>
+                    • SQL (DML y DDL)
                 </p>
+        </div>
+        
 
-    <!-- Botón de lectura -->
-            <button id="btnLeerMas">Leer más</button>
-            </article>
-            </section>
+        <!-- Botón -->
+        <button id="btnLeerMas">Leer más</button>
 
-            <figure>
-            <img src="Imagen-ailen.jpg" alt="Imagen de Ailén Urzagaste">
-            <figcaption>Ailén Urzagaste</figcaption>
-            </figure>
-        </main>
+    </article>
+        </section>
+    <figure>
+        <img src="Imagen-ailen.jpg" alt="Imagen de Ailén Urzagaste">
+        <figcaption>Ailén Urzagaste</figcaption>
+    </figure>
 
-<script>
-document.addEventListener("DOMContentLoaded", () => {
-    const btn = document.getElementById("btnLeerMas");
-    const extra = document.getElementById("masInfo");
+    </main>
 
-    btn.addEventListener("click", () => {
-    const visible = extra.style.display === "block";
-    extra.style.display = visible ? "none" : "block";
-    btn.textContent = visible ? "Leer más" : "Leer menos";
-    });
-});
-</script>
+    <footer> 
+        <p>© 2025 Ailén Urzagaste Aguirre</p>
+        <p>Universidad Nacional del Comahue - Viedma, Río Negro</p> 
+    </footer>
 
-        <footer> 
-            <p> © 2025 Ailén Urzagaste Aguirre</p>
-            <p> Univesidad COMAHUE-Viedma, Rio Negro</p> 
-        </footer>
-        <!-- Botón "Volver al inicio" -->
-            <a href="acercade.html" class="btn-subir" title="Volver arriba">↑</a>
-
-        </body>
+    <!-- Botón "Volver al inicio" -->
+    <a href="#acercade" class="btn-subir" title="Volver arriba">↑</a>
+<script src="script.js" defer ></script>
+</body>
+</html>

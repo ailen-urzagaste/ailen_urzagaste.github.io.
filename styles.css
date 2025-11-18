@@ -6,7 +6,7 @@ body {
 }
 
 h1 {
-  color:rgb(255, 0, 85); 
+color:rgb(255, 0, 85); 
     text-align: center;
     text-shadow: 1px 1px 10px;
     font-family:'Times New Roman', Times, serif;
@@ -256,7 +256,6 @@ html {
     scroll-behavior: smooth;
 }
 
-/* Contenedor del texto "Acerca de mí" */
 .texto-acercade {
     max-height: 300px;        /* alto máximo */
     overflow-y: auto;         /* aparece barra de desplazamiento si es necesario */
@@ -268,7 +267,7 @@ html {
 }
 
 /* Primera línea fija */
-.linea-fija {
+.resumen {
     position: sticky;
     top: 0;                   /* se fija arriba del contenedor */
     background-color:white; /* mismo fondo para que no se superponga feo */
@@ -278,39 +277,10 @@ html {
     z-index: 999; /*encima de todo */
 }
 #btnLeerMas{background-color:rgb(146, 151, 243);}
-
-/* Estilos generales (para pantallas grandes o computadoras) */
-body {
-font-family: Arial, sans-serif;
-margin: 20px;
+#cvCompleto {
+    display: none;          /* oculto por defecto */
+    margin-top: 10px;
+    font-family: "EB Garamond", serif;
+    line-height: 1.6;
 }
 
-/* Para tablets o pantallas medianas */
-@media (max-width: 768px) {
-body {
-    background-color: #f5f5f5;
-}
-
-header img {
-    width: 100px;
-}
-}
-
-/* Para celulares o pantallas pequeñas */
-@media (max-width: 480px) {
-body {
-    font-size: 16px;
-    margin: 10px;
-}
-
-nav ul {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-}
-
-img {
-    width: 90%;
-    height: auto;
-}
-}
