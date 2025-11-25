@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Piedra, Papel o Tijera</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background: #f0f0f0;
+            text-align: center;
+            padding-top: 40px;
+        }
+
+        h1 {
+            color: #333;
+        }
+
+        .opciones button {
+            padding: 12px 20px;
+            margin: 10px;
+            font-size: 18px;
+            cursor: pointer;
+            border-radius: 8px;
+            border: none;
+            background: rgb(146, 151, 243)0;
+            color: white;
+            transition: 0.3s;
+        }
+
+        .opciones button:hover {
+            background: rgb(81, 86, 176);
+        }
+
+        #resultado, #eleccion-usuario, #eleccion-pc {
+            margin-top: 20px;
+            font-size: 20px;
+        }
+
+        #resultado {
+            font-weight: bold;
+        }
+
+        .btn-subir {
+            position: fixed;
+            bottom: 20px;
+            right: 20px;}
+    </style>
+</head>
+<body>
+
+    <h1>Juguemos <br> Piedra, Papel o Tijera</h1>
+
+    <p>Elegí una opción:</p>
+
+    <div class="opciones">
+        <button onclick="jugar('piedra')"> Piedra</button>
+        <button onclick="jugar('papel')"> Papel</button>
+        <button onclick="jugar('tijera')"> Tijera</button>
+    </div>
+
+    <p id="eleccion-usuario"></p>
+    <p id="eleccion-pc"></p>
+    <p id="resultado"></p>
+
+    <script src="juego.js"></script>
+    <a href="index.html" class="btn-subir" title=>"Volver al inicio"</a>
+
+
+</body>
+</html>
