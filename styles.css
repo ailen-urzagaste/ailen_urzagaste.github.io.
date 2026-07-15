@@ -1,16 +1,11 @@
 /* lab3 */
 body {
-  font-family: Arial, sans-serif;
-  margin: 30px;
-  background-color: #fafafa;
+    font-family:'Times New Roman', serif;
+    margin: 30px;
+    padding-top:10px; 
+    background-color:white;
 }
 
-h1 {
-color:rgb(146, 151, 243); 
-    text-align: center;
-    text-shadow: 1px 1px 10px;
-    font-family:'Times New Roman', Times, serif;
-    }
 
 a {color:#000000;
 font-family:Georgia, 'Times New Roman', Times, serif;
@@ -18,46 +13,38 @@ font-family:Georgia, 'Times New Roman', Times, serif;
 
 
 a:hover {
-  text-decoration: underline; 
+    text-decoration: underline; 
 }
 
 label {
-  display: block;
-  margin-top: 10px;
-  font-weight: bold;
+    display: block;
+    margin-top: 10px;
 }
 
 input, textarea {
-  width: 100%;
-  padding: 6px;
-  margin-top: 4px;
-  border: 1px solid #ccc;
-  border-radius: 4px;
+    width: 100%;
+    padding: 6px;
+    margin-top: 4px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
 }
 
 fieldset {
-  margin-top: 15px;
-  padding: 10px;
-  border: 1px solid #aaa;
-  border-radius: 6px;
+    margin-top: 15px;
+    padding: 10px;
+    border: 1px solid #aaa;
+    border-radius: 6px;
 }
 
-legend {
-  font-weight: bold;
-}
 
 button {
-  margin-top: 15px;
-  padding: 8px 16px;
-  background-color: rgb(146, 151, 243); 
-  color: white;
-  border: none;
-  border-radius: 4px;
-  cursor: pointer;
-}
-
-button:hover {
-background-color:rgb(146, 151, 243); 
+    background:rgb(146, 151, 243);
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    margin:8px;
+    border-radius: 5px;
+    cursor: pointer;
 }
 
 table {
@@ -67,7 +54,7 @@ border-collapse: collapse;
 }
 
 th, td {
-border: 1px solid #aaa;
+border: 1px solid #aaaaaa;
 padding: 8px;
 text-align: left;
 }
@@ -84,11 +71,7 @@ h1 {color:rgb(4, 47, 139);
     opacity:0;
     animation: aparecer 2.5s ease forwards;
 }
-@keyframes aparecer{
-    to{
-        opacity:3;
-    }
-    }
+
 a{color:#000000;
 font-family:Georgia, 'Times New Roman', Times, serif, front;
 }
@@ -99,10 +82,8 @@ margin: 15px;
 p{
     font-family: "EB Garamond", serif;
     font-optical-sizing: auto;
-    font-weight: weight;
     font-style: normal;
     margin:0px;
-    opacity:0;
     animation: aparecer 2.5s ease forwards;
     margin: 0;
 }
@@ -111,15 +92,17 @@ p{
     height: 300px;   /* altura maxima */
 
 }
-
-
-.titulo{
-    opacity:0;
-    animation: aparecer 2.5s ease forwards;
+.titulo {
+    font-size: 2.5em;
+    color: #003399;
+    text-shadow: 2px 2px 5px #ccc;
+    margin-bottom: 10px; /* espacio antes de la barra */
+    animation: aparecer 2.5s ease;
 }
+
 @keyframes aparecer{
     to{
-        opacity:3;
+        opacity:1;
     }
 }
 .header-titulo{
@@ -128,21 +111,25 @@ p{
     align-items:center;
     gap: 50px;
 }
-main{
-    margin-top: 80px;
-    
-}
+
 .header-titulo img{
     width: 120px;
     height:auto;
+    animation: girar 2s ease;
 }
 .header-titulo img:hover{
-    transform: rotateY(360deg);
     transform-style: preserve-3d;
     transition: transform .7s ease;
 }
+@keyframes girar {
+    from{
+        transform: rotateY(0deg)(0deg);
+    }
+    to{
+        transform: rotateY(360deg);
+    }
+}
 
-.titulo{margin: 0};
 
 .titulo-con-logo{
     width: 1200px;
@@ -158,7 +145,7 @@ img{
 nav{
     background:rgb(146, 151, 243); 
     border-radius: 80px;
-    box-shadow: 0 25px 20px -20px rgb (0,0,0,0,4) ;
+    box-shadow: 0 25px 20px -20px rgba (0,0,0,0.4) ;
     margin: 10px;
     position:relative;
     width: 100%;
@@ -170,10 +157,10 @@ nav{
 nav ul li{
     list-style: none;
     display: inline-grid;
-    padding: 13px, 35px;
+    padding: 13px,;
     margin: 7px;
-    font-size: 15px;
-    font-weight: 500;
+    font-size: 15px,35 px;
+    font-weight: 400;
     cursor: pointer;
     position: relative;
     z-index: 800;
@@ -181,16 +168,10 @@ nav ul li{
     
 }
 
-head{
-    position: relative;
-    width: 100%;
-    z-index: 999;
-}
 #sticky-line{
     position: sticky;
     top:0;
     background: white;
-    font-weight: bold;
     z-index: 999;
 }
 header{    /*fijo*/
@@ -205,23 +186,10 @@ header{    /*fijo*/
     margin-top: 0px;
 }
 
-body {
-    font-family: 'Times New Roman', serif;
-    margin: 0;
-    padding-top: 0px;
-    background-color: #fff;
-}
-
-.titulo {
-    font-size: 2.5em;
-    color: #003399;
-    text-shadow: 2px 2px 5px #ccc;
-    margin-bottom: 10px; /* espacio antes de la barra */
-}
 /*prueba*/
 
 main {
-    margin-top: 150px; /* ajustá este valor según la altura del header */
+    margin-top: 130px; /* ajustá este valor según la altura del header */
     padding: 20px;
 }
 
@@ -234,7 +202,6 @@ main {
     color: white;
     text-decoration: none;
     font-size: 24px;
-    font-weight: bold;
     border-radius: 50%;
     width: 50px;
     height: 50px;
@@ -295,15 +262,6 @@ html {
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
 }
 
-button {
-    background:rgb(146, 151, 243);
-    color: white;
-    border: none;
-    padding: 10px 20px;
-    margin:8px;
-    border-radius: 5px;
-    cursor: pointer;
-}
 .barra{
     display: flex;
     background:rgb(146, 151, 243);
@@ -318,26 +276,9 @@ button {
     left: 0px;
     right: 0px;
 }
-
-.barra ul {
-    list-style: none;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    gap: 20px;
-    padding: 0;
-    margin: 0;
+form {
+    margin-top: 170px;
 }
-.barra ul li {
-    list-style: none;
-    display: inline-grid;
-    padding: 13px, 35px;
-    margin: 7px;
-    font-size: 15px;
-    font-weight: 500;
-    cursor: pointer;
-    position: relative;
-    z-index: 800;
-    transition: color 0.3s;
-    left: 100px;
+.container{
+    margin-top: 0px;
 }

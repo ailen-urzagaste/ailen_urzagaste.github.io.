@@ -2,35 +2,51 @@
 <html lang="es">
 <head>
     <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Mini juego</title>
     <link rel ="stylesheet" href="styles.css">
-<body>
-    <nav class="barra">
-            <ul> 
-                <li><a href="index.html">Inicio</a></li>
-                <li><a href="acercade.html">Acerca de mí</a></li>
-                <li><a href="contacto.html">Contacto</a></li>
-                <li><a href= "juego.html"> Mini Juego </a> </li>
-            </ul>
-    </nav>
-
-    <div class="container">
-    <h1>Juguemos <br> Piedra, Papel o Tijera</h1>
-
-    <p>Elegí una opción:</p>
-
-    <div class="opciones">
-        <button onclick="jugar('piedra')"> Piedra</button>
-        <button onclick="jugar('papel')"> Papel</button>
-        <button onclick="jugar('tijera')"> Tijera</button>
-
-    <p id="eleccion-usuario"></p>
-    <p id="eleccion-pc"></p>
-    <p id="resultado"></p>
-    </div>
-
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=EB+Garamond&display=swap" rel="stylesheet">
+</head>
+    <body id="inicio">
+        <header> 
+                <div class="header-titulo">
+                <h1>Mini juego</h1>
+                <img src="logouni.jpeg" alt="logo">
+                </div>
+            
+            <nav class="navbar">
+                <ul> 
+                    <li><a href="index.html">Inicio</a></li>
+                    <li><a href="acercade.html">Acerca de mí</a></li>
+                    <li><a href="Contacto.html">Contacto</a></li>
+                    <li><a href= "juego.html"> Mini Juego </a> </li>
+                </ul>
+            </nav>
+        </header>
+        <main>
+            <div class="container">
+                <h2>Juguemos <br> Piedra, Papel o Tijera</h2>
+                <p>Elige una opción:</p>
+                
+                <div class="opciones">
+                    <button onclick="jugar('piedra')"> Piedra</button>
+                    <button onclick="jugar('papel')"> Papel</button>
+                    <button onclick="jugar('tijera')"> Tijera</button>
+                
+                <p id="eleccion-usuario"></p>
+                <p id="eleccion-pc"></p>
+                <p id="resultado"></p>
+                </div>
+            </div>
+        </main>
+        <footer> 
+        <p>© 2025 Ailén Urzagaste Aguirre</p>
+        <p>Universidad Nacional del Comahue - Viedma, Río Negro</p> 
+    </footer>
     <script src="juego.js"></script>
-    <a href="#acercade" class="btn-subir" title="Volver arriba">↑</a>
+    <a href="#inicio" class="btn-subir" title="Volver arriba">↑</a>
 
-</body>
+    </body>
 </html>

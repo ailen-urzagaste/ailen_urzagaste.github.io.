@@ -1,7 +1,5 @@
 document.addEventListener("DOMContentLoaded", () => {
 
-    const form = document.getElementById("Formulario");
-
     const map = {
         nombre: "tdNombre",
         apellido: "tdApellido",
@@ -15,9 +13,12 @@ document.addEventListener("DOMContentLoaded", () => {
 
     const validators = {
         email: (value) => /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(value),
-        codigoPostal: (value) => /^[0-9]{4,8}$/.test(value),
+        codigoPostal: (value) => /^[A-Z][0-9]{4}[A-Z]{3}$/.test(value),
         telefono: (value) => value.length >= 6 || value === "",
-        edad: (value) => Number(value) > 0 || value === "",
+        edad: (value) => {
+            const edad = Number(value);
+            return edad >= 16 && edad <= 120 || value === "";
+        },
         nombre: (value) => value.length >= 2,
         apellido: (value) => value.length >= 2,
         direccion: (value) => value.length >= 3 || value === "",
@@ -52,13 +53,13 @@ document.addEventListener("DOMContentLoaded", () => {
     function obtenerMensajeError(id) {
         const msgs = {
             email: "El correo debe tener un formato válido (ej: ejemplo@gmail.com).",
-            codigoPostal: "El código postal debe tener entre 4 y 8 números.",
+            codigoPostal: "Ej A1234ABC.",
             telefono: "El teléfono debe tener al menos 6 dígitos.",
-            edad: "La edad debe ser un número mayor a 0.",
+            edad: "La edad debe ser un número mayor a 16 y menor a 120.",
             nombre: "El nombre debe tener al menos 2 caracteres.",
             apellido: "El apellido debe tener al menos 2 caracteres.",
             direccion: "La dirección debe tener al menos 3 caracteres.",
-            provincia: "Debes seleccionar una provincia.",
+            provincia: "Selecciona una provincia.",
         };
         return msgs[id] || "Dato inválido";
     }

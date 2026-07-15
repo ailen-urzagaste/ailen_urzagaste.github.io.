@@ -5,11 +5,26 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title> Contacto </title>
     <link rel="stylesheet" href="styles.css">
-</head id=inicioform>
-<body>
-    <!--Enlace para volver a la pagina principal-->
-        <h1> Contacto </h1>
-        <a href="index.html"> Volver a la pagina principal</a><br><br>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=EB+Garamond&display=swap" rel="stylesheet">
+</head>
+<body id=inicio>
+    <header class="topbarra"> 
+        <div class="header-titulo">
+            <h1>Contacto</h1>
+            <img src="logouni.jpeg" alt="logo">
+        </div>
+
+        <nav class="navbar">
+            <ul> 
+                <li><a href="index.html">Inicio</a></li>
+                <li><a href="acercade.html">Acerca de mí</a></li>
+                <li><a href="Contacto.html">Contacto</a></li>
+                <li><a href= "juego.html"> Mini Juego </a> </li>
+            </ul>
+        </nav>
+    </header>
     <!-- Campo para el nombre-->
     <form id="Formulario">
 
@@ -17,7 +32,7 @@
         <input type="text" id="nombre" name="nombre" maxlength="20" required><br> <br>
         <!--Campo para el apellido-->
         <label for="apellido"> Apellido</label>
-        <input type="text" id="apellido" name="apellido" maxlength="20" required><br><br>
+        <input type="text" id="apellido" name="apellido" maxlength="20"><br><br>
         <!--Campo para email-->
         <label for="email"> Email (requerido)</label>
         <input type="email" id="email" name="email" required><br><br>
@@ -51,12 +66,21 @@
                 <option value="Mendoza">
                 <option value="Misiones">
                 <option value="Neuquén">
+                <option value="Río Negro">
+                <option value="Salta">
+                <option value="San Juan">
+                <option value="San Luis">
+                <option value="Santa Cruz">
+                <option value="Santa Fe">
+                <option value="Santiago del Estero">
+                <option value="Tierra del Fuego">
+                <option value="Tucumán">
             </datalist>
         <!--Codigo Postal-->
         <label for="codigoPostal"> Codigo Postal </label>
-        <input type="text" id="codigoPostal" name="codigoPostal"
+        <input type="text" id="codigoPostal" name="codigoPostal" minlength="4" maxlength="8"
         pattern="[A-Z][0-9]{4}[A-Z]{3}"
-        placeholder="Ej:A1234ABC"><br><br>
+        placeholder="Ej:A8534ABC"><br><br>
         
         <fieldset> <!--Metodo de contacto-->
             <legend> Metodo de Contacto: </legend>
@@ -78,7 +102,7 @@
             <!--Tipo de suscripcion-->
             <legend> Tipo de suscripción: </legend>
             <input type="checkbox" id="Noticias" name="suscripcion"
-            value="Noticias" checked>
+            value="Noticias">
             <label for="Noticias"> Noticias </label><br>
 
             <input type="checkbox" id="Promociones" name="suscripcion"
@@ -86,10 +110,11 @@
             <label for="Promociones"> Promociones </label><br>
 
             <input type="checkbox" id="Alertas" name="suscripcion"
-            value="Alertas">
+            value="Alertas" checked>
             <label for="Alertas"> Alertas </label><br>
 
-            <input type="checkbox" id="Eventos" name="suscripcion" value="Eventos">
+            <input type="checkbox" id="Eventos" name="suscripcion"
+            value="Eventos">
             <label for="Eventos"> Eventos</label>
         </fieldset> <br>
         <!--Boton de carga-->
@@ -118,10 +143,13 @@
     </tbody>
 </table>
 
-
+<footer> 
+        <p>© 2025 Ailén Urzagaste Aguirre</p>
+        <p>Universidad Nacional del Comahue - Viedma, Río Negro</p> 
+    </footer>
 <!-- Enlace al archivo JavaScript -->
 <script src="script.js" defer ></script>
-<a href="Contacto.html" class="btn-subir" title="Volver arriba">↑</a>
+<a href="#inicio" class="btn-subir" title="Volver arriba">↑</a>
 
 </body>
 </html>

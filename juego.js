@@ -6,7 +6,7 @@ function jugar(eleccionUsuario) {
         "Tu: " + eleccionUsuario.toUpperCase();
 
     document.getElementById("eleccion-pc").textContent =
-        "Bot: " + eleccionPc.toUpperCase();
+        "Computadora: " + eleccionPc.toUpperCase();
 
     let resultado = "";
 
